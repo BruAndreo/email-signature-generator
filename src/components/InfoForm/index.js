@@ -7,6 +7,7 @@ function InfoForm() {
       <Button
         variant="contained"
         component="label"
+        margin="normal"
       >
         Upload
         <input type="file" hidden />
@@ -20,6 +21,7 @@ function InfoForm() {
         variant="outlined"
         fullWidth
         size="small"
+        margin="normal"
       />
 
       <TextField
@@ -29,6 +31,7 @@ function InfoForm() {
         variant="outlined"
         fullWidth
         size="small"
+        margin="normal"
       />
 
     <TextField
@@ -39,15 +42,17 @@ function InfoForm() {
         variant="outlined"
         fullWidth
         size="small"
+        margin="normal"
       />
 
     <TextField
       id="phase"
       name="phase"
-      label="pahse"
+      label="Phase"
       variant="outlined"
       fullWidth
       size="small"
+      margin="normal"
     />
   </form>
   );
