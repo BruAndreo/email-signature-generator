@@ -1,0 +1,29 @@
+.signature {
+  flex-direction: column;
+}
+
+.logo {
+  width: 150px;
+  height: 110px;
+  float: left;
+  margin: 10px;
+  margin-top: 25px;
+}
+
+.signature-text {
+  float: left;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.p-infos {
+  font-size: 16px;
+}
+
+.p-phase {
+  font-size: 12px;
+  color: #9f8f9f;
+}

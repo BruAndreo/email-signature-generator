@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, TextField } from '@material-ui/core';
 
 function InfoForm() {
+  const [name, setName] = useState();
+  const [position, setPosition] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
+  const [phase, setPhase] = useState();
+
   return (
     <form>
       <Button
@@ -22,6 +27,8 @@ function InfoForm() {
         fullWidth
         size="small"
         margin="normal"
+        value={name}
+        onChange={e => setName(e.target.value)}
       />
 
       <TextField
@@ -32,6 +39,9 @@ function InfoForm() {
         fullWidth
         size="small"
         margin="normal"
+        required
+        value={position}
+        onChange={e => setPosition(e.target.value)}
       />
 
     <TextField
@@ -43,6 +53,9 @@ function InfoForm() {
         fullWidth
         size="small"
         margin="normal"
+        required
+        value={phoneNumber}
+        onChange={e => setPhoneNumber(e.target.value)}
       />
 
     <TextField
@@ -53,6 +66,8 @@ function InfoForm() {
       fullWidth
       size="small"
       margin="normal"
+      value={phase}
+      onChange={e => setPhase(e.target.value)}
     />
   </form>
   );
