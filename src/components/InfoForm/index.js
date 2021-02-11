@@ -1,23 +1,17 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@material-ui/core';
 
-function InfoForm() {
+function InfoForm({ onGenerate }) {
   const [name, setName] = useState();
   const [position, setPosition] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
   const [phase, setPhase] = useState();
 
   return (
-    <form>
-      <Button
-        variant="contained"
-        component="label"
-        margin="normal"
-      >
-        Upload
-        <input type="file" hidden />
-      </Button>
-
+    <form onSubmit={e => {
+      e.preventDefault();
+      onGenerate(name, position, phoneNumber, phase);
+    }}>
       <TextField
         id="name"
         name="name"
@@ -69,6 +63,11 @@ function InfoForm() {
       value={phase}
       onChange={e => setPhase(e.target.value)}
     />
+
+    <Button
+      type="submit"
+      variant="contained"
+      color="primary">Generate</Button>
   </form>
   );
 };
