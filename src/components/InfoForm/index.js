@@ -10,7 +10,7 @@ function InfoForm({ onGenerate }) {
   return (
     <form onSubmit={e => {
       e.preventDefault();
-      onGenerate(name, position, phoneNumber, phase);
+      onGenerate({ name, position, phoneNumber, phase });
     }}>
       <TextField
         id="name"

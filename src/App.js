@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import './App.css';
 import { Container, Typography } from '@material-ui/core';
 import InfoForm from './components/InfoForm';
 import Signature from './components/Signature';
 
 function App() {
+  const [signature, setSignature] = useState({});
+
   return (
     <Container maxWidth="sm">
 
@@ -16,11 +19,11 @@ function App() {
 
       <br />
 
-      <InfoForm />
+      <InfoForm onGenerate={setSignature} />
 
       <br />
 
-      <Signature />
+      {signature.name && (<Signature data={signature} />)}
 
     </Container>
   );
